@@ -8,7 +8,6 @@ public class viewPro{
 
     private final int row=27,col=40,hei=705,wid=1366;
     private Toolkit t = Toolkit.getDefaultToolkit();
-    private Dimension d = t.getScreenSize();
     private JFrame f;
     private JPanel gameMain,gameMenu,winMenu,menu,game;
     private JLabel winName;
@@ -35,8 +34,8 @@ public class viewPro{
         cGameEvent g = new cGameEvent(this);
         cMenuEvent m = new cMenuEvent(this);
 
-        f.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        f.setSize(d.width,d.height);
+        f.setIconImage(t.getDefaultToolkit().createImage("E:/Caro"));
+        f.setSize(wid,hei);
         f.setLayout(null);
 
         menu.setBounds(483,100,400,500);
@@ -205,20 +204,6 @@ public class viewPro{
     public void setTurn(int x){
         turn = x;
     }
-
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     public int getWin(){
         return win;
